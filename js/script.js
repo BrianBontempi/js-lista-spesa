@@ -7,12 +7,16 @@ for (let i = 0; i < listaSpesa.length; i++) {
 }
 
 
+// Recupero la lista in pagina
+const listElement = document.getElementById("lista");
+
 // Inizializziamo il contatore per il ciclo while
 const shoppingList = ["Biscotti", "Lasagne", "Pizza", "Surgelati"]
 let counter = 0;
 
-// Ciclo while per stampare gli elementi della lista
+// Ciclo while per stampare gli elementi della lista in console e in pagina
 while (counter < shoppingList.length) {
     console.log(shoppingList[counter]);
+    listElement.innerHTML += `<li>${shoppingList[counter]}</li>`;
     counter++;
 }
